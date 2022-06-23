@@ -1,6 +1,7 @@
 // This is the Import section
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
+const db = require('./config/mongoose');
 
 // Setting up the Express Server
 const app = express();
