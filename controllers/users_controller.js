@@ -34,3 +34,9 @@ module.exports.signIn = function(req, res){
         title: 'Codeial | Sign In'
     });
 }
+
+module.exports.profile = function(req, res){
+    return res.render('user_profile', {
+        title: 'Codeial | Profile Section'
+    });
+}
