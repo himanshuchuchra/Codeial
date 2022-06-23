@@ -1,9 +1,11 @@
 // This is the Import section
 const express = require('express');
+const expressLayouts = require('express-ejs-layouts');
 
 // Setting up the Express Server
 const app = express();
 const port = 8000;
+app.use(expressLayouts);
 
 // Setting up EJS as our View Engine
 app.set('view engine', 'ejs');
