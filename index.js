@@ -5,13 +5,14 @@ const expressLayouts = require('express-ejs-layouts');
 // Setting up the Express Server
 const app = express();
 const port = 8000;
-app.use(expressLayouts);
-
-// Setting up EJS as our View Engine
 app.set('view engine', 'ejs');
 app.set('views', './views');
+app.set('layout extractStyles', true);
+app.set('layout extractScripts', true);
 
 // This is the Middleware Section
+app.use(express.static('./assets'));
+app.use(expressLayouts);
 app.use('/', require('./routes'));
 
 app.listen(port, function(err){
