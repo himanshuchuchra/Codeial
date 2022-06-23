@@ -5,6 +5,10 @@ const express = require('express');
 const app = express();
 const port = 8000;
 
+// Setting up EJS as our View Engine
+app.set('view engine', 'ejs');
+app.set('views', './views');
+
 // This is the Middleware Section
 app.use('/', require('./routes'));
 
