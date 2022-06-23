@@ -1,4 +1,4 @@
-// This is the Import section
+// This is the Import Section
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
 const db = require('./config/mongoose');
