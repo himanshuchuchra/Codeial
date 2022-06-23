@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
+  },
+  "name": "codeial",
+  "version": "1.0.0",
+  "description": "Codeial is a social media platform for the community of developers to share their ideas, new technologies and showcase their work.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/himanshuchuchra/Codeial.git"
+  },
+  "keywords": [
+    "coding",
+    "programming",
+    "social media",
+    "developers"
+  ],
+  "author": "Himanshu Chuchra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/himanshuchuchra/Codeial/issues"
+  },
+  "homepage": "https://github.com/himanshuchuchra/Codeial#readme"
+}
