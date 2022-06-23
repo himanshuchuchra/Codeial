@@ -3,6 +3,8 @@ const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
 const db = require('./config/mongoose');
 const sassMiddleware = require('node-sass-middleware');
+const cookieParser = require('cookie-parser');
+const { urlencoded } = require('body-parser');
 
 // Setting up the Express Server
 const app = express();
@@ -22,6 +24,8 @@ app.use(sassMiddleware({
     outputStyle: 'extended',
     prefix: '/css'
 }));
+app.use(express.urlencoded());
+app.use(cookieParser());
 app.use('/', require('./routes'));
 
 app.listen(port, function(err){
