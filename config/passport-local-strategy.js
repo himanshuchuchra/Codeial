@@ -17,3 +17,19 @@ passport.use(new LocalStrategy({
         return done(null, user);
     });
 }));
+
+passport.serializeUser(function(user, done){
+    done(null, user.id);
+});
+
+passport.deserializeUser(function(id, done){
+    User.findById(id, function(err, user){
+        if(err){
+            console.log(`Error in finding user --> Deserialize User: ${err} `);
+            return done(err);
+        }
+        return done(null, user);
+    });
+});
+
+module.exports = passport;
