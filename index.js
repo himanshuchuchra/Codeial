@@ -8,6 +8,7 @@ const { urlencoded } = require('body-parser');
 const session = require('express-session');
 const passport = require('passport');
 const passportLocal = require('./config/passport-local-strategy');
+const MongoStore = require('connect-mongo');
 
 // Setting up the Express Server
 const app = express();
@@ -36,7 +37,16 @@ app.use(session({
     resave: false,
     cookie: {
         maxAge: (1000*60*100)
-    }
+    },
+    store: MongoStore.create(
+        {
+            mongoUrl: "mongodb://localhost/codeial_database",
+            autoRemove: 'disabled'
+        },
+        function(err){
+            console.log(err || 'connect-mongodb setup ok');
+        }
+    )
 }));
 app.use(passport.initialize());
 app.use(passport.session());
