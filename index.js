@@ -5,6 +5,9 @@ const db = require('./config/mongoose');
 const sassMiddleware = require('node-sass-middleware');
 const cookieParser = require('cookie-parser');
 const { urlencoded } = require('body-parser');
+const session = require('express-session');
+const passport = require('passport');
+const passportLocal = require('./config/passport-local-strategy');
 
 // Setting up the Express Server
 const app = express();
@@ -26,6 +29,17 @@ app.use(sassMiddleware({
 }));
 app.use(express.urlencoded());
 app.use(cookieParser());
+app.use(session({
+    name: 'codeial',
+    secret: 'blahsomething',
+    saveUninitialized: false,
+    resave: false,
+    cookie: {
+        maxAge: (1000*60*100)
+    }
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 app.use('/', require('./routes'));
 
 app.listen(port, function(err){

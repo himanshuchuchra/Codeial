@@ -1,5 +1,23 @@
 const User = require('../models/user');
 
+module.exports.signUp = function(req, res){
+    return res.render('user_sign_up', {
+        title: 'Codeial | Sign Up'
+    });
+}
+
+module.exports.signIn = function(req, res){
+    return res.render('user_sign_in', {
+        title: 'Codeial | Sign In'
+    });
+}
+
+module.exports.profile = function(req, res){
+    return res.render('user_profile', {
+        title: 'Codeial | Profile Section'
+    });
+}
+
 module.exports.create = function(req, res){
     if(req.body.password != req.body.confirm_password){
         return res.redirect('back');
@@ -23,20 +41,6 @@ module.exports.create = function(req, res){
     });
 }
 
-module.exports.signUp = function(req, res){
-    return res.render('user_sign_up', {
-        title: 'Codeial | Sign Up'
-    });
-}
-
-module.exports.signIn = function(req, res){
-    return res.render('user_sign_in', {
-        title: 'Codeial | Sign In'
-    });
-}
-
-module.exports.profile = function(req, res){
-    return res.render('user_profile', {
-        title: 'Codeial | Profile Section'
-    });
+module.exports.createSession = function(req, res){
+    return res.redirect('/');
 }
