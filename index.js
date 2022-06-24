@@ -19,8 +19,6 @@ app.set('layout extractStyles', true);
 app.set('layout extractScripts', true);
 
 // This is the Middleware Section
-app.use(expressLayouts);
-app.use(express.static('./assets'));
 app.use(sassMiddleware({
     src: './assets/scss',
     dest: './assets/css',
@@ -28,6 +26,8 @@ app.use(sassMiddleware({
     outputStyle: 'extended',
     prefix: '/css'
 }));
+app.use(expressLayouts);
+app.use(express.static('./assets'));
 app.use(express.urlencoded());
 app.use(cookieParser());
 app.use(session({
