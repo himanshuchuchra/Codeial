@@ -56,6 +56,6 @@ module.exports.destroySession = function(req, res, next){
         if(err){
             return next(err);
         }
+        return res.redirect('/');
     });
-    return res.redirect('/');
 }
