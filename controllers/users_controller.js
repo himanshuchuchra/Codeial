@@ -19,8 +19,11 @@ module.exports.signIn = function(req, res){
 }
 
 module.exports.profile = function(req, res){
-    return res.render('user_profile', {
-        title: 'Codeial | Profile Section'
+    User.findById(req.params.id, function(err, user){
+        return res.render('user_profile', {
+            title: 'Codeial | Profile Section',
+            profile_user: user
+        });
     });
 }
 
