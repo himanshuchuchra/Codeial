@@ -1,3 +1,13 @@
 <h1>User's Profile Page</h1>
-<p><%= profile_user.name %></p>
-<p><%= profile_user.email %></p>
+
+<% if(user.id == profile_user.id){ %>
+    <form action="/users/update/<%= profile_user.id %>" method="post">
+        <input type="text" name="name" placeholder="Your Name" value="<%= profile_user.name %>" required>
+        <input type="text" name="email" placeholder="Your E-Mail" value="<%= profile_user.email %>" required>
+        <input type="number" name="mobile_number" placeholder="Your Mobile Number" value="<%= profile_user.mobile_number %>" required>
+        <input type="submit" value="Update">
+    </form>
+<% }else{ %>
+    <p><%= profile_user.name %></p>
+    <p><%= profile_user.email %></p>
+<% } %>
