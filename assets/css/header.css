@@ -10,7 +10,10 @@
   height: 55px;
   background-color: black;
   display: flex;
-  color: white; }
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0; }
   #main-header #website-logo a {
     color: white;
     text-decoration: none; }

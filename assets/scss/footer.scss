@@ -1,0 +1,36 @@
+footer{
+    background-color: rgb(20, 20, 20);
+    color: white;
+    height: 80px;
+    display: flex;
+    font-family: 'Trebuchet MS';
+    font-size: 16px;
+
+    #copyright{
+        margin: 10px;
+    }
+
+    .menu{
+        margin: 7px 5px;
+        
+        ul{
+            margin-block-start: 0;
+            margin-block-end: 0;
+            padding-inline-start: 0;
+            
+            li{
+                display: flex;
+                margin: 3px;
+
+                a{
+                    text-decoration: none;
+                    color: white;
+
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}

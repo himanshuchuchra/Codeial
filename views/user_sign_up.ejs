@@ -1,8 +1,23 @@
-<form action="/users/create" method="post">
-    <input type="text" name="name" placeholder="Enter Full Name" required>
-    <input type="email" name="email" placeholder="Enter Email-ID" required>
-    <input type="password" name="password" placeholder="Create Strong Password" required>
-    <input type="password" name="confirm_password" placeholder="Confirm Password" required>
-    <input type="number" name="mobile_number" placeholder="Enter 10 Digit Mobile Number" required>
-    <input type="submit" value="Sign Up">
-</form>
+<link rel="stylesheet" href="/css/user_auth.css">
+
+<div id="main-container">
+    <div id="sign-in-form">
+        <p>
+            SIGN UP | 
+            <code>{codeial}</code>
+        </p>
+        <form action="/users/create" method="post">
+            <input type="text" name="name" placeholder="Enter Full Name" required>
+            <br>
+            <input type="email" name="email" placeholder="Enter Email-ID" required>
+            <br>
+            <input type="password" name="password" placeholder="Create Strong Password" required>
+            <br>
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+            <br>
+            <input type="number" name="mobile_number" placeholder="Enter Mobile Number" required>
+            <br>
+            <input type="submit" value="SIGN UP" id="form-submit">
+        </form>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+@font-face {
+  font-family: Ahsing;
+  src: url(/fonts/Ahsing-Regular.otf); }
+
+#main-container {
+  height: 100vh;
+  background-color: #e7e7e7; }
+  #main-container #sign-in-form {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    #main-container #sign-in-form p {
+      font-family: 'Trebuchet MS';
+      font-weight: 1000;
+      font-size: 25px;
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 5px 10px;
+      padding-bottom: 10px;
+      border-radius: 12px;
+      width: 300px; }
+      #main-container #sign-in-form p code {
+        font-family: Ahsing;
+        font-size: 30px; }
+    #main-container #sign-in-form input {
+      margin-top: 10px;
+      padding: 5px;
+      border: 2px solid black;
+      width: 200px;
+      margin-left: 50px;
+      font-family: 'Trebuchet MS';
+      font-size: 15px; }
+    #main-container #sign-in-form #form-submit {
+      background-color: blue;
+      font-family: 'Trebuchet MS';
+      font-size: 20px;
+      color: white;
+      width: 213px; }

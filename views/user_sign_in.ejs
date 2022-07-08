@@ -1,5 +1,16 @@
-<form action="/users/create-session" method="post">
-    <input type="email" name="email" placeholder="Enter Email-ID" required>
-    <input type="password" name="password" placeholder="Enter Password" required>
-    <input type="submit" value="Sign In">
-</form>
+<link rel="stylesheet" href="/css/user_auth.css">
+<div id="main-container">
+    <div id="sign-in-form">
+        <p>
+            SIGN IN | 
+            <code>{codeial}</code>
+        </p>
+        <form action="/users/create-session" method="post">
+            <input type="email" name="email" placeholder="Enter Email-ID" required>
+            <br>
+            <input type="password" name="password" placeholder="Enter Password" required>
+            <br>
+            <input type="submit" value="SIGN IN" id="form-submit">
+        </form>
+    </div>
+</div>

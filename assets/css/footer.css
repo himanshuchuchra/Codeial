@@ -1,0 +1,23 @@
+footer {
+  background-color: #141414;
+  color: white;
+  height: 80px;
+  display: flex;
+  font-family: 'Trebuchet MS';
+  font-size: 16px; }
+  footer #copyright {
+    margin: 10px; }
+  footer .menu {
+    margin: 7px 5px; }
+    footer .menu ul {
+      margin-block-start: 0;
+      margin-block-end: 0;
+      padding-inline-start: 0; }
+      footer .menu ul li {
+        display: flex;
+        margin: 3px; }
+        footer .menu ul li a {
+          text-decoration: none;
+          color: white; }
+          footer .menu ul li a:hover {
+            text-decoration: underline; }
