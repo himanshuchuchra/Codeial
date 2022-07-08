@@ -1,21 +1,29 @@
-<header>
-    <ul>
-        <% if(locals.user){ %>
-            <li>
-                <a href="/users/profile/<%= user.id %>">
-                    <%= user.name %>
-                </a>
-            </li>
-            <li>
-                <a href="/users/sign-out">Sign Out</a>
-            </li>
-        <% } else { %>
-            <li>
-                <a href="/users/sign-in">Sign In</a>
-            </li>
-            <li>
-                <a href="/users/sign-up">Sign Up</a>
-            </li>
-        <% } %>
-    </ul>
+<link rel="stylesheet" href="/css/header.css">
+<header id="main-header">
+    <div id="website-logo">
+        <a href="/">
+            <code>{codeial}</code>
+        </a>
+    </div>
+    <div id="website-auth">
+        <ul>
+            <% if(locals.user){ %>
+                <li class="style-one">
+                    <a href="/users/profile/<%= user.id %>">
+                        <%= user.name %>
+                    </a>
+                </li>
+                <li class="style-two">
+                    <a href="/users/sign-out">Sign Out</a>
+                </li>
+                <% } else { %>
+                    <li class="style-one">
+                        <a href="/users/sign-in">Sign In</a>
+                    </li>
+                    <li class="style-two">
+                        <a href="/users/sign-up">Sign Up</a>
+                    </li>
+                <% } %>
+        </ul>
+    </div>
 </header>

@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Ahsing;
+    src: url(/fonts/Ahsing-Regular.otf);
+}
+
+#main-header{
+    height: 55px;
+    background-color: black;
+    display: flex;
+    color: white;
+
+    #website-logo{
+        a{
+            color: white;
+            text-decoration: none;
+            code{
+                margin-left: 10px;
+                font-size: 38px;
+                font-family: Ahsing;
+                font-weight: 1000;
+            }
+        }
+    }
+
+    #website-auth{
+        display: flex;
+        width: 100%;
+        justify-content: right;
+        align-items: center;
+        margin-right: 5px;
+
+        ul{
+            display: flex;
+            
+            li{
+                display: flex;
+                margin: 5px;
+                padding: 7px 15px;
+                border-radius: 12px;
+                font-family: 'Trebuchet MS';
+                font-weight: 1000;
+                text-transform: uppercase;
+                font-size: 18px;
+
+                a{
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+
+            .style-one{
+                background-color: blue;
+            }
+
+            .style-two{
+                background-color: red;
+            }
+        }
+    }
+}
