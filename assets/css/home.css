@@ -1,2 +1,7 @@
 #home-structure {
-  height: 100vh; }
+  margin-top: 60px;
+  height: 100vh;
+  display: flex; }
+  #home-structure #feed-posts {
+    padding: 10px 40px;
+    width: 65%; }

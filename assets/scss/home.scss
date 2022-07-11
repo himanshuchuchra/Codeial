@@ -1,3 +1,10 @@
 #home-structure{
+    margin-top: 60px;
     height: 100vh;
+    display: flex;
+
+    #feed-posts{
+        padding: 10px 40px;
+        width: 65%;
+    }
 }
