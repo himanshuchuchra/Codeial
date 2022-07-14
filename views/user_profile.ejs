@@ -1,10 +1,11 @@
 <h1>User's Profile Page</h1>
-
+<img src="<%= user.avatar %>" alt="<%= user.name %>" width="100px">
 <% if(user.id == profile_user.id){ %>
-    <form action="/users/update/<%= profile_user.id %>" method="post">
+    <form action="/users/update/<%= profile_user.id %>" method="post" enctype="multipart/form-data">
         <input type="text" name="name" placeholder="Your Name" value="<%= profile_user.name %>" required>
         <input type="text" name="email" placeholder="Your E-Mail" value="<%= profile_user.email %>" required>
         <input type="number" name="mobile_number" placeholder="Your Mobile Number" value="<%= profile_user.mobile_number %>" required>
+        <input type="file" name="avatar" placeholder="Profile Picture">
         <input type="submit" value="Update">
     </form>
 <% }else{ %>
