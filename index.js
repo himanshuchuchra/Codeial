@@ -42,7 +42,7 @@ app.use(session({
     },
     store: MongoStore.create(
         {
-            mongoUrl: "mongodb://localhost/codeial_database",
+            mongoUrl: "mongodb://localhost/codeial_development_phase",
             autoRemove: 'disabled'
         },
         function(err){
