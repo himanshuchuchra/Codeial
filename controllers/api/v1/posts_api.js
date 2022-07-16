@@ -20,16 +20,17 @@ module.exports.index = async function(req, res){
 module.exports.destroy = async function (req, res) {
     try {
         let post = await Post.findById(req.params.id);
-        // if (post.user == req.user.id) {
+        if (post.user == req.user.id) {
             post.remove();
             await Comment.deleteMany({ post: req.params.id });
             return res.json(200, {
                 message: 'Post Deleted!'
             });
-        // } else {
-        //     req.flash('error', 'Not Authorized');
-        //     return res.redirect('back');
-        // }
+        } else {
+            return res.json(401, {
+                message: "Not Authorized to delete this!!"
+            });
+        }
     } catch (err) {
         console.log('****ERROR****', err);
         return res.json(500, {
