@@ -19,8 +19,6 @@ const userSchema = new mongoose.Schema({
     },
     mobile_number:{
         type: Number,
-        required: true,
-        unique: true
     },
     avatar: {
         type: String

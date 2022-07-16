@@ -49,5 +49,24 @@
             color: white;
             width: 213px;
         }
+
+        .google-auth{
+            width: 200px;
+            height: 18px;
+            margin-top: 10px;
+            padding: 5px;
+            background-color: red;
+            font-family: 'Trebuchet MS';
+            font-size: 15px;
+            border: 2px solid black;
+            text-transform: uppercase;
+            margin-left: 50px;
+            a{
+                color: white;
+                text-decoration: none;
+                margin-left: 12px;
+                padding: 5px;
+            }
+        }
     }
 }
